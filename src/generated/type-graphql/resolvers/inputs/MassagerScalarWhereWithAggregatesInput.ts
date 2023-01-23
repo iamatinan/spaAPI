@@ -43,9 +43,4 @@ export class MassagerScalarWhereWithAggregatesInput {
     nullable: true
   })
   user_id?: StringWithAggregatesFilter | undefined;
-
-  @TypeGraphQL.Field(_type => IntWithAggregatesFilter, {
-    nullable: true
-  })
-  appointment_id?: IntWithAggregatesFilter | undefined;
 }

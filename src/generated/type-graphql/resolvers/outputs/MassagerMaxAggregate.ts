@@ -26,9 +26,4 @@ export class MassagerMaxAggregate {
     nullable: true
   })
   user_id!: string | null;
-
-  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-    nullable: true
-  })
-  appointment_id!: number | null;
 }

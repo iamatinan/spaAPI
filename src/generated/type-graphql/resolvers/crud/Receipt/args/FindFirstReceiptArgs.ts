@@ -35,5 +35,5 @@ export class FindFirstReceiptArgs {
   @TypeGraphQL.Field(_type => [ReceiptScalarFieldEnum], {
     nullable: true
   })
-  distinct?: Array<"id" | "customer_id" | "create_by" | "create_at" | "service_id" | "appoint_id" | "promotion_id" | "product_id"> | undefined;
+  distinct?: Array<"id" | "customer_id" | "create_by" | "create_at" | "service_id" | "appoint_id" | "promotion_id" | "product_id" | "recive_service_id"> | undefined;
 }

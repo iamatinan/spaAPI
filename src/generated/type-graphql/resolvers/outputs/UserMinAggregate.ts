@@ -36,9 +36,4 @@ export class UserMinAggregate {
     nullable: true
   })
   address!: string | null;
-
-  @TypeGraphQL.Field(_type => String, {
-    nullable: true
-  })
-  role!: string | null;
 }

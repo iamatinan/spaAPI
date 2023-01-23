@@ -1,0 +1,1 @@
+export { MassagerAppointmentArgs } from "./MassagerAppointmentArgs";

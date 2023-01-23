@@ -3,6 +3,7 @@ import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
 import { StringFieldUpdateOperationsInput } from "../inputs/StringFieldUpdateOperationsInput";
+import { UserUpdateManyWithoutRoleInput } from "../inputs/UserUpdateManyWithoutRoleInput";
 
 @TypeGraphQL.InputType("RoleUpdateInput", {
   isAbstract: true
@@ -12,4 +13,9 @@ export class RoleUpdateInput {
     nullable: true
   })
   role_name?: StringFieldUpdateOperationsInput | undefined;
+
+  @TypeGraphQL.Field(_type => UserUpdateManyWithoutRoleInput, {
+    nullable: true
+  })
+  user?: UserUpdateManyWithoutRoleInput | undefined;
 }

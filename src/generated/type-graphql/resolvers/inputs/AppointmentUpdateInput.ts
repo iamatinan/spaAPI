@@ -3,24 +3,16 @@ import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
 import { BoolFieldUpdateOperationsInput } from "../inputs/BoolFieldUpdateOperationsInput";
+import { CustommerUpdateOneRequiredWithoutAppointmentInput } from "../inputs/CustommerUpdateOneRequiredWithoutAppointmentInput";
 import { DateTimeFieldUpdateOperationsInput } from "../inputs/DateTimeFieldUpdateOperationsInput";
-import { IntFieldUpdateOperationsInput } from "../inputs/IntFieldUpdateOperationsInput";
+import { MassagerUpdateOneRequiredWithoutAppointmentInput } from "../inputs/MassagerUpdateOneRequiredWithoutAppointmentInput";
+import { Recive_serviceUpdateOneWithoutAppointmentInput } from "../inputs/Recive_serviceUpdateOneWithoutAppointmentInput";
 import { StringFieldUpdateOperationsInput } from "../inputs/StringFieldUpdateOperationsInput";
 
 @TypeGraphQL.InputType("AppointmentUpdateInput", {
   isAbstract: true
 })
 export class AppointmentUpdateInput {
-  @TypeGraphQL.Field(_type => IntFieldUpdateOperationsInput, {
-    nullable: true
-  })
-  customer_id?: IntFieldUpdateOperationsInput | undefined;
-
-  @TypeGraphQL.Field(_type => IntFieldUpdateOperationsInput, {
-    nullable: true
-  })
-  massager_id?: IntFieldUpdateOperationsInput | undefined;
-
   @TypeGraphQL.Field(_type => DateTimeFieldUpdateOperationsInput, {
     nullable: true
   })
@@ -50,4 +42,19 @@ export class AppointmentUpdateInput {
     nullable: true
   })
   finish?: BoolFieldUpdateOperationsInput | undefined;
+
+  @TypeGraphQL.Field(_type => CustommerUpdateOneRequiredWithoutAppointmentInput, {
+    nullable: true
+  })
+  custommer?: CustommerUpdateOneRequiredWithoutAppointmentInput | undefined;
+
+  @TypeGraphQL.Field(_type => MassagerUpdateOneRequiredWithoutAppointmentInput, {
+    nullable: true
+  })
+  massager?: MassagerUpdateOneRequiredWithoutAppointmentInput | undefined;
+
+  @TypeGraphQL.Field(_type => Recive_serviceUpdateOneWithoutAppointmentInput, {
+    nullable: true
+  })
+  recive_service?: Recive_serviceUpdateOneWithoutAppointmentInput | undefined;
 }

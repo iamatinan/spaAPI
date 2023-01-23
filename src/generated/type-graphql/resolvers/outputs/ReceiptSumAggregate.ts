@@ -41,4 +41,9 @@ export class ReceiptSumAggregate {
     nullable: true
   })
   product_id!: number | null;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  recive_service_id!: number | null;
 }

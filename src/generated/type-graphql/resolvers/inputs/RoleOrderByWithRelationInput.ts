@@ -2,6 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
+import { UserOrderByRelationAggregateInput } from "../inputs/UserOrderByRelationAggregateInput";
 import { SortOrder } from "../../enums/SortOrder";
 
 @TypeGraphQL.InputType("RoleOrderByWithRelationInput", {
@@ -17,4 +18,9 @@ export class RoleOrderByWithRelationInput {
     nullable: true
   })
   role_name?: "asc" | "desc" | undefined;
+
+  @TypeGraphQL.Field(_type => UserOrderByRelationAggregateInput, {
+    nullable: true
+  })
+  user?: UserOrderByRelationAggregateInput | undefined;
 }

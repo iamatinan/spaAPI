@@ -21,16 +21,6 @@ export class AppointmentOrderByWithAggregationInput {
   @TypeGraphQL.Field(_type => SortOrder, {
     nullable: true
   })
-  customer_id?: "asc" | "desc" | undefined;
-
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
-  })
-  massager_id?: "asc" | "desc" | undefined;
-
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
-  })
   date_appoint?: "asc" | "desc" | undefined;
 
   @TypeGraphQL.Field(_type => SortOrder, {
@@ -57,6 +47,16 @@ export class AppointmentOrderByWithAggregationInput {
     nullable: true
   })
   finish?: "asc" | "desc" | undefined;
+
+  @TypeGraphQL.Field(_type => SortOrder, {
+    nullable: true
+  })
+  customer_id?: "asc" | "desc" | undefined;
+
+  @TypeGraphQL.Field(_type => SortOrder, {
+    nullable: true
+  })
+  massager_id?: "asc" | "desc" | undefined;
 
   @TypeGraphQL.Field(_type => AppointmentCountOrderByAggregateInput, {
     nullable: true

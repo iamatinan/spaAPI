@@ -36,9 +36,4 @@ export class UserCreateManyInput {
     nullable: false
   })
   address!: string;
-
-  @TypeGraphQL.Field(_type => String, {
-    nullable: false
-  })
-  role!: string;
 }

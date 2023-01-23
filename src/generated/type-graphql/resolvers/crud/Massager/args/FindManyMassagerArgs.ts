@@ -35,5 +35,5 @@ export class FindManyMassagerArgs {
   @TypeGraphQL.Field(_type => [MassagerScalarFieldEnum], {
     nullable: true
   })
-  distinct?: Array<"id" | "name" | "lname" | "user_id" | "appointment_id"> | undefined;
+  distinct?: Array<"id" | "name" | "lname" | "user_id"> | undefined;
 }

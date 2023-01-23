@@ -37,9 +37,4 @@ export class UserMinOrderByAggregateInput {
     nullable: true
   })
   address?: "asc" | "desc" | undefined;
-
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
-  })
-  role?: "asc" | "desc" | undefined;
 }

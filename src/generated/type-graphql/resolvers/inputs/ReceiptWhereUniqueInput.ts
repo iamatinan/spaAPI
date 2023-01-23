@@ -11,4 +11,9 @@ export class ReceiptWhereUniqueInput {
     nullable: true
   })
   id?: number | undefined;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  recive_service_id?: number | undefined;
 }

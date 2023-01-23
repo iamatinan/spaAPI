@@ -12,16 +12,6 @@ export class AppointmentMaxAggregate {
   })
   id!: number | null;
 
-  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-    nullable: true
-  })
-  customer_id!: number | null;
-
-  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-    nullable: true
-  })
-  massager_id!: number | null;
-
   @TypeGraphQL.Field(_type => Date, {
     nullable: true
   })
@@ -51,4 +41,14 @@ export class AppointmentMaxAggregate {
     nullable: true
   })
   finish!: boolean | null;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  customer_id!: number | null;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: true
+  })
+  massager_id!: number | null;
 }

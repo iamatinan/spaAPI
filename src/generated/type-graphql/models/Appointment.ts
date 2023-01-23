@@ -2,6 +2,9 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../scalars";
+import { Custommer } from "../models/Custommer";
+import { Massager } from "../models/Massager";
+import { Recive_service } from "../models/Recive_service";
 
 @TypeGraphQL.ObjectType("Appointment", {
   isAbstract: true
@@ -11,16 +14,6 @@ export class Appointment {
     nullable: false
   })
   id!: number;
-
-  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-    nullable: false
-  })
-  customer_id!: number;
-
-  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-    nullable: false
-  })
-  massager_id!: number;
 
   @TypeGraphQL.Field(_type => Date, {
     nullable: false
@@ -51,4 +44,20 @@ export class Appointment {
     nullable: false
   })
   finish!: boolean;
+
+  custommer?: Custommer;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: false
+  })
+  customer_id!: number;
+
+  massager?: Massager;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: false
+  })
+  massager_id!: number;
+
+  recive_service?: Recive_service | null;
 }

@@ -1,0 +1,10 @@
+export { AppointmentRelationsResolver } from "./Appointment/AppointmentRelationsResolver";
+export { CustommerRelationsResolver } from "./Custommer/CustommerRelationsResolver";
+export { MassagerRelationsResolver } from "./Massager/MassagerRelationsResolver";
+export { ProductRelationsResolver } from "./Product/ProductRelationsResolver";
+export { PromotionRelationsResolver } from "./Promotion/PromotionRelationsResolver";
+export { ReceiptRelationsResolver } from "./Receipt/ReceiptRelationsResolver";
+export { Recive_serviceRelationsResolver } from "./Recive_service/Recive_serviceRelationsResolver";
+export { RoleRelationsResolver } from "./Role/RoleRelationsResolver";
+export { ServiceRelationsResolver } from "./Service/ServiceRelationsResolver";
+export { UserRelationsResolver } from "./User/UserRelationsResolver";

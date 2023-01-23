@@ -2,6 +2,8 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
+import { AppointmentOrderByRelationAggregateInput } from "../inputs/AppointmentOrderByRelationAggregateInput";
+import { Recive_serviceOrderByWithRelationInput } from "../inputs/Recive_serviceOrderByWithRelationInput";
 import { SortOrder } from "../../enums/SortOrder";
 
 @TypeGraphQL.InputType("MassagerOrderByWithRelationInput", {
@@ -28,8 +30,13 @@ export class MassagerOrderByWithRelationInput {
   })
   user_id?: "asc" | "desc" | undefined;
 
-  @TypeGraphQL.Field(_type => SortOrder, {
+  @TypeGraphQL.Field(_type => AppointmentOrderByRelationAggregateInput, {
     nullable: true
   })
-  appointment_id?: "asc" | "desc" | undefined;
+  appointment?: AppointmentOrderByRelationAggregateInput | undefined;
+
+  @TypeGraphQL.Field(_type => Recive_serviceOrderByWithRelationInput, {
+    nullable: true
+  })
+  recive_service?: Recive_serviceOrderByWithRelationInput | undefined;
 }

@@ -31,16 +31,6 @@ export class AppointmentScalarWhereWithAggregatesInput {
   })
   id?: IntWithAggregatesFilter | undefined;
 
-  @TypeGraphQL.Field(_type => IntWithAggregatesFilter, {
-    nullable: true
-  })
-  customer_id?: IntWithAggregatesFilter | undefined;
-
-  @TypeGraphQL.Field(_type => IntWithAggregatesFilter, {
-    nullable: true
-  })
-  massager_id?: IntWithAggregatesFilter | undefined;
-
   @TypeGraphQL.Field(_type => DateTimeWithAggregatesFilter, {
     nullable: true
   })
@@ -70,4 +60,14 @@ export class AppointmentScalarWhereWithAggregatesInput {
     nullable: true
   })
   finish?: BoolWithAggregatesFilter | undefined;
+
+  @TypeGraphQL.Field(_type => IntWithAggregatesFilter, {
+    nullable: true
+  })
+  customer_id?: IntWithAggregatesFilter | undefined;
+
+  @TypeGraphQL.Field(_type => IntWithAggregatesFilter, {
+    nullable: true
+  })
+  massager_id?: IntWithAggregatesFilter | undefined;
 }

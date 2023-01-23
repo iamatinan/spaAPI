@@ -2,7 +2,8 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
-import { IntFieldUpdateOperationsInput } from "../inputs/IntFieldUpdateOperationsInput";
+import { AppointmentUpdateManyWithoutMassagerInput } from "../inputs/AppointmentUpdateManyWithoutMassagerInput";
+import { Recive_serviceUpdateOneWithoutMassagerInput } from "../inputs/Recive_serviceUpdateOneWithoutMassagerInput";
 import { StringFieldUpdateOperationsInput } from "../inputs/StringFieldUpdateOperationsInput";
 
 @TypeGraphQL.InputType("MassagerUpdateInput", {
@@ -24,8 +25,13 @@ export class MassagerUpdateInput {
   })
   user_id?: StringFieldUpdateOperationsInput | undefined;
 
-  @TypeGraphQL.Field(_type => IntFieldUpdateOperationsInput, {
+  @TypeGraphQL.Field(_type => AppointmentUpdateManyWithoutMassagerInput, {
     nullable: true
   })
-  appointment_id?: IntFieldUpdateOperationsInput | undefined;
+  appointment?: AppointmentUpdateManyWithoutMassagerInput | undefined;
+
+  @TypeGraphQL.Field(_type => Recive_serviceUpdateOneWithoutMassagerInput, {
+    nullable: true
+  })
+  recive_service?: Recive_serviceUpdateOneWithoutMassagerInput | undefined;
 }

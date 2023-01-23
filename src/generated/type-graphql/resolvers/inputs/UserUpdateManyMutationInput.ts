@@ -32,9 +32,4 @@ export class UserUpdateManyMutationInput {
     nullable: true
   })
   address?: StringFieldUpdateOperationsInput | undefined;
-
-  @TypeGraphQL.Field(_type => StringFieldUpdateOperationsInput, {
-    nullable: true
-  })
-  role?: StringFieldUpdateOperationsInput | undefined;
 }

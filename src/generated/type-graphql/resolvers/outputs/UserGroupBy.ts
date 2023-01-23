@@ -42,11 +42,6 @@ export class UserGroupBy {
   })
   address!: string;
 
-  @TypeGraphQL.Field(_type => String, {
-    nullable: false
-  })
-  role!: string;
-
   @TypeGraphQL.Field(_type => UserCountAggregate, {
     nullable: true
   })

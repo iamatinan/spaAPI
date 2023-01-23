@@ -4,6 +4,7 @@ import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
 import { DateTimeFieldUpdateOperationsInput } from "../inputs/DateTimeFieldUpdateOperationsInput";
 import { IntFieldUpdateOperationsInput } from "../inputs/IntFieldUpdateOperationsInput";
+import { Recive_serviceUpdateManyWithoutProductInput } from "../inputs/Recive_serviceUpdateManyWithoutProductInput";
 import { StringFieldUpdateOperationsInput } from "../inputs/StringFieldUpdateOperationsInput";
 
 @TypeGraphQL.InputType("ProductUpdateInput", {
@@ -29,4 +30,9 @@ export class ProductUpdateInput {
     nullable: true
   })
   create_at?: DateTimeFieldUpdateOperationsInput | undefined;
+
+  @TypeGraphQL.Field(_type => Recive_serviceUpdateManyWithoutProductInput, {
+    nullable: true
+  })
+  recive_service?: Recive_serviceUpdateManyWithoutProductInput | undefined;
 }

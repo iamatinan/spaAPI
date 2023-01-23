@@ -1,0 +1,51 @@
+import * as TypeGraphQL from "type-graphql";
+import * as GraphQLScalars from "graphql-scalars";
+import { Prisma } from "@prisma/client";
+import { DecimalJSScalar } from "../../scalars";
+import { MassagerCreateNestedOneWithoutAppointmentInput } from "../inputs/MassagerCreateNestedOneWithoutAppointmentInput";
+import { Recive_serviceCreateNestedOneWithoutAppointmentInput } from "../inputs/Recive_serviceCreateNestedOneWithoutAppointmentInput";
+
+@TypeGraphQL.InputType("AppointmentCreateWithoutCustommerInput", {
+  isAbstract: true
+})
+export class AppointmentCreateWithoutCustommerInput {
+  @TypeGraphQL.Field(_type => Date, {
+    nullable: false
+  })
+  date_appoint!: Date;
+
+  @TypeGraphQL.Field(_type => Date, {
+    nullable: true
+  })
+  create_at?: Date | undefined;
+
+  @TypeGraphQL.Field(_type => String, {
+    nullable: false
+  })
+  appoint_by!: string;
+
+  @TypeGraphQL.Field(_type => String, {
+    nullable: false
+  })
+  booking_time_start!: string;
+
+  @TypeGraphQL.Field(_type => String, {
+    nullable: false
+  })
+  booking_time_end!: string;
+
+  @TypeGraphQL.Field(_type => Boolean, {
+    nullable: false
+  })
+  finish!: boolean;
+
+  @TypeGraphQL.Field(_type => MassagerCreateNestedOneWithoutAppointmentInput, {
+    nullable: false
+  })
+  massager!: MassagerCreateNestedOneWithoutAppointmentInput;
+
+  @TypeGraphQL.Field(_type => Recive_serviceCreateNestedOneWithoutAppointmentInput, {
+    nullable: true
+  })
+  recive_service?: Recive_serviceCreateNestedOneWithoutAppointmentInput | undefined;
+}

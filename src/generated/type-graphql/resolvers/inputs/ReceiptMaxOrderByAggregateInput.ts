@@ -47,4 +47,9 @@ export class ReceiptMaxOrderByAggregateInput {
     nullable: true
   })
   product_id?: "asc" | "desc" | undefined;
+
+  @TypeGraphQL.Field(_type => SortOrder, {
+    nullable: true
+  })
+  recive_service_id?: "asc" | "desc" | undefined;
 }

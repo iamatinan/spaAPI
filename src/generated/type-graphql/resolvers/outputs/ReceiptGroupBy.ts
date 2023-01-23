@@ -52,6 +52,11 @@ export class ReceiptGroupBy {
   })
   product_id!: number;
 
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: false
+  })
+  recive_service_id!: number;
+
   @TypeGraphQL.Field(_type => ReceiptCountAggregate, {
     nullable: true
   })

@@ -4,8 +4,7 @@ export enum MassagerScalarFieldEnum {
   id = "id",
   name = "name",
   lname = "lname",
-  user_id = "user_id",
-  appointment_id = "appointment_id"
+  user_id = "user_id"
 }
 TypeGraphQL.registerEnumType(MassagerScalarFieldEnum, {
   name: "MassagerScalarFieldEnum",

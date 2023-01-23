@@ -17,16 +17,6 @@ export class AppointmentGroupBy {
   })
   id!: number;
 
-  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-    nullable: false
-  })
-  customer_id!: number;
-
-  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-    nullable: false
-  })
-  massager_id!: number;
-
   @TypeGraphQL.Field(_type => Date, {
     nullable: false
   })
@@ -56,6 +46,16 @@ export class AppointmentGroupBy {
     nullable: false
   })
   finish!: boolean;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: false
+  })
+  customer_id!: number;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: false
+  })
+  massager_id!: number;
 
   @TypeGraphQL.Field(_type => AppointmentCountAggregate, {
     nullable: true

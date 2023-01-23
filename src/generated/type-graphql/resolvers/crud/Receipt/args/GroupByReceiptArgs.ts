@@ -20,7 +20,7 @@ export class GroupByReceiptArgs {
   @TypeGraphQL.Field(_type => [ReceiptScalarFieldEnum], {
     nullable: false
   })
-  by!: Array<"id" | "customer_id" | "create_by" | "create_at" | "service_id" | "appoint_id" | "promotion_id" | "product_id">;
+  by!: Array<"id" | "customer_id" | "create_by" | "create_at" | "service_id" | "appoint_id" | "promotion_id" | "product_id" | "recive_service_id">;
 
   @TypeGraphQL.Field(_type => ReceiptScalarWhereWithAggregatesInput, {
     nullable: true

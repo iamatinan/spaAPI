@@ -20,7 +20,7 @@ export class GroupByMassagerArgs {
   @TypeGraphQL.Field(_type => [MassagerScalarFieldEnum], {
     nullable: false
   })
-  by!: Array<"id" | "name" | "lname" | "user_id" | "appointment_id">;
+  by!: Array<"id" | "name" | "lname" | "user_id">;
 
   @TypeGraphQL.Field(_type => MassagerScalarWhereWithAggregatesInput, {
     nullable: true

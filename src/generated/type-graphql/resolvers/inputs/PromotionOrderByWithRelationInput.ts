@@ -2,6 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
+import { Recive_serviceOrderByRelationAggregateInput } from "../inputs/Recive_serviceOrderByRelationAggregateInput";
 import { SortOrder } from "../../enums/SortOrder";
 
 @TypeGraphQL.InputType("PromotionOrderByWithRelationInput", {
@@ -37,4 +38,9 @@ export class PromotionOrderByWithRelationInput {
     nullable: true
   })
   create_at?: "asc" | "desc" | undefined;
+
+  @TypeGraphQL.Field(_type => Recive_serviceOrderByRelationAggregateInput, {
+    nullable: true
+  })
+  recive_service?: Recive_serviceOrderByRelationAggregateInput | undefined;
 }

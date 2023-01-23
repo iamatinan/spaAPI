@@ -2,6 +2,9 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../scalars";
+import { Appointment } from "../models/Appointment";
+import { Recive_service } from "../models/Recive_service";
+import { MassagerCount } from "../resolvers/outputs/MassagerCount";
 
 @TypeGraphQL.ObjectType("Massager", {
   isAbstract: true
@@ -27,8 +30,12 @@ export class Massager {
   })
   user_id!: string;
 
-  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-    nullable: false
+  appointment?: Appointment[];
+
+  recive_service?: Recive_service | null;
+
+  @TypeGraphQL.Field(_type => MassagerCount, {
+    nullable: true
   })
-  appointment_id!: number;
+  _count?: MassagerCount | null;
 }

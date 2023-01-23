@@ -32,11 +32,6 @@ export class MassagerGroupBy {
   })
   user_id!: string;
 
-  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-    nullable: false
-  })
-  appointment_id!: number;
-
   @TypeGraphQL.Field(_type => MassagerCountAggregate, {
     nullable: true
   })

@@ -4,6 +4,7 @@ import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
 import { DateTimeFilter } from "../inputs/DateTimeFilter";
 import { IntFilter } from "../inputs/IntFilter";
+import { Recive_serviceRelationFilter } from "../inputs/Recive_serviceRelationFilter";
 
 @TypeGraphQL.InputType("ReceiptWhereInput", {
   isAbstract: true
@@ -63,4 +64,14 @@ export class ReceiptWhereInput {
     nullable: true
   })
   product_id?: IntFilter | undefined;
+
+  @TypeGraphQL.Field(_type => Recive_serviceRelationFilter, {
+    nullable: true
+  })
+  recive_service?: Recive_serviceRelationFilter | undefined;
+
+  @TypeGraphQL.Field(_type => IntFilter, {
+    nullable: true
+  })
+  recive_service_id?: IntFilter | undefined;
 }

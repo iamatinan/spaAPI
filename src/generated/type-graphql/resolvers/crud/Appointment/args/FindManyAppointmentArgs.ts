@@ -35,5 +35,5 @@ export class FindManyAppointmentArgs {
   @TypeGraphQL.Field(_type => [AppointmentScalarFieldEnum], {
     nullable: true
   })
-  distinct?: Array<"id" | "customer_id" | "massager_id" | "date_appoint" | "create_at" | "appoint_by" | "booking_time_start" | "booking_time_end" | "finish"> | undefined;
+  distinct?: Array<"id" | "date_appoint" | "create_at" | "appoint_by" | "booking_time_start" | "booking_time_end" | "finish" | "customer_id" | "massager_id"> | undefined;
 }

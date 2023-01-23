@@ -4,6 +4,7 @@ import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
 import { DateTimeFilter } from "../inputs/DateTimeFilter";
 import { IntFilter } from "../inputs/IntFilter";
+import { Recive_serviceListRelationFilter } from "../inputs/Recive_serviceListRelationFilter";
 import { StringFilter } from "../inputs/StringFilter";
 
 @TypeGraphQL.InputType("ProductWhereInput", {
@@ -49,4 +50,9 @@ export class ProductWhereInput {
     nullable: true
   })
   create_at?: DateTimeFilter | undefined;
+
+  @TypeGraphQL.Field(_type => Recive_serviceListRelationFilter, {
+    nullable: true
+  })
+  recive_service?: Recive_serviceListRelationFilter | undefined;
 }

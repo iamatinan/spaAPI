@@ -1,10 +1,10 @@
 export { Appointment } from "./Appointment";
 export { Custommer } from "./Custommer";
-export { History_service } from "./History_service";
 export { Massager } from "./Massager";
 export { Product } from "./Product";
 export { Promotion } from "./Promotion";
 export { Receipt } from "./Receipt";
+export { Recive_service } from "./Recive_service";
 export { Role } from "./Role";
 export { Service } from "./Service";
 export { User } from "./User";

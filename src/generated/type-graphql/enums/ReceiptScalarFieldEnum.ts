@@ -8,7 +8,8 @@ export enum ReceiptScalarFieldEnum {
   service_id = "service_id",
   appoint_id = "appoint_id",
   promotion_id = "promotion_id",
-  product_id = "product_id"
+  product_id = "product_id",
+  recive_service_id = "recive_service_id"
 }
 TypeGraphQL.registerEnumType(ReceiptScalarFieldEnum, {
   name: "ReceiptScalarFieldEnum",

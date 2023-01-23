@@ -11,9 +11,4 @@ export class MassagerSumAggregate {
     nullable: true
   })
   id!: number | null;
-
-  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-    nullable: true
-  })
-  appointment_id!: number | null;
 }

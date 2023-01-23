@@ -2,6 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
+import { Recive_serviceCreateNestedOneWithoutReceiptInput } from "../inputs/Recive_serviceCreateNestedOneWithoutReceiptInput";
 
 @TypeGraphQL.InputType("ReceiptCreateInput", {
   isAbstract: true
@@ -41,4 +42,9 @@ export class ReceiptCreateInput {
     nullable: false
   })
   product_id!: number;
+
+  @TypeGraphQL.Field(_type => Recive_serviceCreateNestedOneWithoutReceiptInput, {
+    nullable: false
+  })
+  recive_service!: Recive_serviceCreateNestedOneWithoutReceiptInput;
 }

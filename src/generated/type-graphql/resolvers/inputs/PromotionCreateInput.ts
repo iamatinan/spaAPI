@@ -2,6 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
+import { Recive_serviceCreateNestedManyWithoutPromotionInput } from "../inputs/Recive_serviceCreateNestedManyWithoutPromotionInput";
 
 @TypeGraphQL.InputType("PromotionCreateInput", {
   isAbstract: true
@@ -31,4 +32,9 @@ export class PromotionCreateInput {
     nullable: true
   })
   create_at?: Date | undefined;
+
+  @TypeGraphQL.Field(_type => Recive_serviceCreateNestedManyWithoutPromotionInput, {
+    nullable: true
+  })
+  recive_service?: Recive_serviceCreateNestedManyWithoutPromotionInput | undefined;
 }

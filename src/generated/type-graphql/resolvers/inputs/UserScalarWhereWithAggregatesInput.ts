@@ -53,9 +53,4 @@ export class UserScalarWhereWithAggregatesInput {
     nullable: true
   })
   address?: StringWithAggregatesFilter | undefined;
-
-  @TypeGraphQL.Field(_type => StringWithAggregatesFilter, {
-    nullable: true
-  })
-  role?: StringWithAggregatesFilter | undefined;
 }

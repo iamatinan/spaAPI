@@ -63,4 +63,9 @@ export class ReceiptScalarWhereWithAggregatesInput {
     nullable: true
   })
   product_id?: IntWithAggregatesFilter | undefined;
+
+  @TypeGraphQL.Field(_type => IntWithAggregatesFilter, {
+    nullable: true
+  })
+  recive_service_id?: IntWithAggregatesFilter | undefined;
 }

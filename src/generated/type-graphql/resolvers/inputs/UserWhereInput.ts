@@ -3,6 +3,7 @@ import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "@prisma/client";
 import { DecimalJSScalar } from "../../scalars";
 import { IntFilter } from "../inputs/IntFilter";
+import { RoleListRelationFilter } from "../inputs/RoleListRelationFilter";
 import { StringFilter } from "../inputs/StringFilter";
 
 @TypeGraphQL.InputType("UserWhereInput", {
@@ -54,8 +55,8 @@ export class UserWhereInput {
   })
   address?: StringFilter | undefined;
 
-  @TypeGraphQL.Field(_type => StringFilter, {
+  @TypeGraphQL.Field(_type => RoleListRelationFilter, {
     nullable: true
   })
-  role?: StringFilter | undefined;
+  role?: RoleListRelationFilter | undefined;
 }

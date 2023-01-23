@@ -1,10 +1,10 @@
 export { AppointmentCrudResolver } from "./Appointment/AppointmentCrudResolver";
 export { CustommerCrudResolver } from "./Custommer/CustommerCrudResolver";
-export { History_serviceCrudResolver } from "./History_service/History_serviceCrudResolver";
 export { MassagerCrudResolver } from "./Massager/MassagerCrudResolver";
 export { ProductCrudResolver } from "./Product/ProductCrudResolver";
 export { PromotionCrudResolver } from "./Promotion/PromotionCrudResolver";
 export { ReceiptCrudResolver } from "./Receipt/ReceiptCrudResolver";
+export { Recive_serviceCrudResolver } from "./Recive_service/Recive_serviceCrudResolver";
 export { RoleCrudResolver } from "./Role/RoleCrudResolver";
 export { ServiceCrudResolver } from "./Service/ServiceCrudResolver";
 export { UserCrudResolver } from "./User/UserCrudResolver";

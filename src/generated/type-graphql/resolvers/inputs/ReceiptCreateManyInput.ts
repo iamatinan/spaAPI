@@ -46,4 +46,9 @@ export class ReceiptCreateManyInput {
     nullable: false
   })
   product_id!: number;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: false
+  })
+  recive_service_id!: number;
 }

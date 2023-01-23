@@ -12,16 +12,6 @@ export class AppointmentCreateManyInput {
   })
   id?: number | undefined;
 
-  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-    nullable: false
-  })
-  customer_id!: number;
-
-  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-    nullable: false
-  })
-  massager_id!: number;
-
   @TypeGraphQL.Field(_type => Date, {
     nullable: false
   })
@@ -51,4 +41,14 @@ export class AppointmentCreateManyInput {
     nullable: false
   })
   finish!: boolean;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: false
+  })
+  customer_id!: number;
+
+  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
+    nullable: false
+  })
+  massager_id!: number;
 }

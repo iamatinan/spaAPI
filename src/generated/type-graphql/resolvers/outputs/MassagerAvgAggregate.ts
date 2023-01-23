@@ -11,9 +11,4 @@ export class MassagerAvgAggregate {
     nullable: true
   })
   id!: number | null;
-
-  @TypeGraphQL.Field(_type => TypeGraphQL.Float, {
-    nullable: true
-  })
-  appointment_id!: number | null;
 }

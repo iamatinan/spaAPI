@@ -136,12 +136,3 @@ model service {
 
 
 }
-
-model history_service {
-  id           Int @id @unique @default(autoincrement())
-  custommer_id Int
-  note         Int
-  receip_id    Int
-    create_at DateTime @default(now())
-
-}

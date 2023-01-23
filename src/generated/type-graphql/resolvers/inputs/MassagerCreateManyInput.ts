@@ -26,9 +26,4 @@ export class MassagerCreateManyInput {
     nullable: false
   })
   user_id!: string;
-
-  @TypeGraphQL.Field(_type => TypeGraphQL.Int, {
-    nullable: false
-  })
-  appointment_id!: number;
 }

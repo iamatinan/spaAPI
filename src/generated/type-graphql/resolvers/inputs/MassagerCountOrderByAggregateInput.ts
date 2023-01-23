@@ -27,9 +27,4 @@ export class MassagerCountOrderByAggregateInput {
     nullable: true
   })
   user_id?: "asc" | "desc" | undefined;
-
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
-  })
-  appointment_id?: "asc" | "desc" | undefined;
 }
