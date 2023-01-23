@@ -1,0 +1,12 @@
+export { AggregateMassagerArgs } from "./AggregateMassagerArgs";
+export { CreateManyMassagerArgs } from "./CreateManyMassagerArgs";
+export { CreateMassagerArgs } from "./CreateMassagerArgs";
+export { DeleteManyMassagerArgs } from "./DeleteManyMassagerArgs";
+export { DeleteMassagerArgs } from "./DeleteMassagerArgs";
+export { FindFirstMassagerArgs } from "./FindFirstMassagerArgs";
+export { FindManyMassagerArgs } from "./FindManyMassagerArgs";
+export { FindUniqueMassagerArgs } from "./FindUniqueMassagerArgs";
+export { GroupByMassagerArgs } from "./GroupByMassagerArgs";
+export { UpdateManyMassagerArgs } from "./UpdateManyMassagerArgs";
+export { UpdateMassagerArgs } from "./UpdateMassagerArgs";
+export { UpsertMassagerArgs } from "./UpsertMassagerArgs";

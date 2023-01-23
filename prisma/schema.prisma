@@ -1,0 +1,111 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl"]
+}
+
+datasource postgres {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator typegraphql {
+  provider = "typegraphql-prisma"
+  output   = "../src/generated/type-graphql"
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
+}
+
+model custommer {
+  id        Int      @id @unique @default(autoincrement())
+  name      String
+  Lname     String
+  email     String
+  phone     String
+  address   String
+  create_at DateTime @default(now())
+}
+
+model role {
+  id        Int    @id @unique @default(autoincrement())
+  role_name String
+}
+
+model user {
+  id      Int    @id @unique @default(autoincrement())
+  name    String
+  lname   String
+  email   String
+  phone   String
+  address String
+  role    String
+}
+
+model appointment {
+  id                 Int     @id @unique @default(autoincrement())
+  customer_id        Int
+  massager_id        Int
+  date_appoint       DateTime
+  create_at          DateTime @default(now())
+  appoint_by         String 
+  booking_time_start String
+  booking_time_end   String
+  finish             Boolean
+}
+
+model massager {
+  id             Int    @id @unique @default(autoincrement())
+  name           String
+  lname          String
+  user_id        String
+  appointment_id Int
+}
+
+model product {
+  id            Int    @id @unique @default(autoincrement())
+  name          String
+  product       String
+  product_price Int
+  create_at DateTime @default(now())
+}
+
+model promotion {
+  id              Int      @id @unique @default(autoincrement())
+  promption_name  String
+  discount_price  Int
+  promotion_start DateTime
+  promotion_end   DateTime
+  create_at DateTime @default(now())
+}
+
+model receipt {
+  id           Int      @id @unique @default(autoincrement())
+  customer_id  Int
+  create_by    Int
+  create_at    DateTime @default(now())
+  service_id   Int
+  appoint_id   Int
+  promotion_id Int
+  product_id   Int
+}
+
+model service {
+  id           Int    @id @unique @default(autoincrement())
+  service_name String
+  price        Int
+    create_at DateTime @default(now())
+
+}
+
+model history_service {
+  id           Int @id @unique @default(autoincrement())
+  custommer_id Int
+  note         Int
+  receip_id    Int
+    create_at DateTime @default(now())
+
+}

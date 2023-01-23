@@ -1,0 +1,12 @@
+export { AggregateAppointmentArgs } from "./AggregateAppointmentArgs";
+export { CreateAppointmentArgs } from "./CreateAppointmentArgs";
+export { CreateManyAppointmentArgs } from "./CreateManyAppointmentArgs";
+export { DeleteAppointmentArgs } from "./DeleteAppointmentArgs";
+export { DeleteManyAppointmentArgs } from "./DeleteManyAppointmentArgs";
+export { FindFirstAppointmentArgs } from "./FindFirstAppointmentArgs";
+export { FindManyAppointmentArgs } from "./FindManyAppointmentArgs";
+export { FindUniqueAppointmentArgs } from "./FindUniqueAppointmentArgs";
+export { GroupByAppointmentArgs } from "./GroupByAppointmentArgs";
+export { UpdateAppointmentArgs } from "./UpdateAppointmentArgs";
+export { UpdateManyAppointmentArgs } from "./UpdateManyAppointmentArgs";
+export { UpsertAppointmentArgs } from "./UpsertAppointmentArgs";
