@@ -28,11 +28,16 @@ model custommer {
   phone     String
   address   String
   create_at DateTime @default(now())
+  appointment appointment[]
+      recive_service recive_service?
+
+
 }
 
 model role {
   id        Int    @id @unique @default(autoincrement())
   role_name String
+  user user[]
 }
 
 model user {
@@ -42,19 +47,24 @@ model user {
   email   String
   phone   String
   address String
-  role    String
+role role[]  
 }
 
 model appointment {
   id                 Int     @id @unique @default(autoincrement())
-  customer_id        Int
-  massager_id        Int
   date_appoint       DateTime
   create_at          DateTime @default(now())
   appoint_by         String 
   booking_time_start String
   booking_time_end   String
   finish             Boolean
+    
+  custommer   custommer @relation(fields: [customer_id], references: [id])
+  customer_id Int
+    massager   massager @relation(fields: [massager_id], references: [id])
+  massager_id Int
+    recive_service recive_service?
+
 }
 
 model massager {
@@ -62,7 +72,24 @@ model massager {
   name           String
   lname          String
   user_id        String
-  appointment_id Int
+appointment appointment[]
+    recive_service recive_service?
+
+}
+model recive_service {
+  id             Int    @id @unique @default(autoincrement())
+
+  appointment      appointment   @relation(fields: [appointment_id], references: [id])
+  appointment_id Int @unique 
+   customer      custommer   @relation(fields: [customer_id], references: [id])
+  customer_id Int @unique 
+
+  massager      massager   @relation(fields: [massager_id], references: [id])
+  massager_id Int @unique 
+  product product[]
+  promotion promotion[]
+  service service[]
+  receipt receipt?
 }
 
 model product {
@@ -71,6 +98,7 @@ model product {
   product       String
   product_price Int
   create_at DateTime @default(now())
+  recive_service recive_service[]
 }
 
 model promotion {
@@ -80,6 +108,8 @@ model promotion {
   promotion_start DateTime
   promotion_end   DateTime
   create_at DateTime @default(now())
+    recive_service recive_service[]
+
 }
 
 model receipt {
@@ -91,13 +121,19 @@ model receipt {
   appoint_id   Int
   promotion_id Int
   product_id   Int
+ recive_service   recive_service @relation(fields: [recive_service_id], references: [id])
+  recive_service_id Int @unique
+
+  
 }
 
 model service {
   id           Int    @id @unique @default(autoincrement())
   service_name String
   price        Int
-    create_at DateTime @default(now())
+  create_at DateTime @default(now())
+    recive_service recive_service[]
+
 
 }
 
